@@ -28,27 +28,23 @@ void loop() {
   state = Serial.read();
   }
   if (state=='w'){
-    Serial.println(state);
+    Serial.println("Forward");
     moveForward();
   }
   if (state=='a'){
-    Serial.println(state);
+    Serial.println("Right");
     moveLeft();
   }
   if (state=='s'){
-    Serial.println(state);
+    Serial.println("Backwards");
     moveBackward();
   }
   if (state=='d'){
-    Serial.println(state);
+    Serial.println("Left");
     moveRight();
   }
-  if (state=='e'){
-    Serial.println(state);
-    velocity+=10;
-  }
   if (state=='x'){
-    Serial.println(state);
+    Serial.println("Stopped");
     moveStop();
   }
 }
